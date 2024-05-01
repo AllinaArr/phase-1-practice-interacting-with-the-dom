@@ -13,12 +13,10 @@ var counterValue = parseInt(counterLocation.textContent);
 
 //
 
-// Define the increaseCounter function
 function increaseCounter() {
-  counterValue += 1; // Increment the counter value by 1
-  counterLocation.textContent = counterValue; // Update the counter display
+  counterValue += 1;
+  counterLocation.textContent = counterValue;
 }
-
 // Set an interval to call the increaseCounter function every second
 var interval = setInterval(increaseCounter, 1000);
 
@@ -60,6 +58,7 @@ pauseBtn.addEventListener("click", () => {
     heartBtn.disabled = true;
     submitBtn.disabled = true;
     pauseBtn.textContent = "resume";
+    clearInterval(interval);
   } else {
     pauseBtn.textContent = "pause";
     plusBtn.disabled = false;
