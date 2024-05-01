@@ -52,3 +52,19 @@ commentForm.addEventListener("submit", (event) => {
   parag.textContent = commentInput.value;
   comment.appendChild(parag);
 });
+
+pauseBtn.addEventListener("click", () => {
+  if (pauseBtn.textContent === "pause") {
+    plusBtn.disabled = true;
+    minusBtn.disabled = true;
+    heartBtn.disabled = true;
+    submitBtn.disabled = true;
+    pauseBtn.textContent = "resume";
+  } else {
+    pauseBtn.textContent = "pause";
+    plusBtn.disabled = false;
+    minusBtn.disabled = false;
+    heartBtn.disabled = false;
+    submitBtn.disabled = false;
+  }
+});
